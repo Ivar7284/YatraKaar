@@ -259,3 +259,33 @@
     height: 400px;
   }
 }
+
+/* --- Team Hero Collage Adjustments --- */
+.team-hero .collage-images {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  opacity: 0.45;
+}
+
+.team-hero .page-hero-bg::before {
+  /* Darker gradient overlay to make text pop */
+  background: linear-gradient(135deg, rgba(13,11,26,0.95) 0%, rgba(13,11,26,0.7) 50%, rgba(13,11,26,0.95) 100%);
+}
+
+.team-hero .page-hero-content {
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8), 0 2px 10px rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+.team-hero .page-hero-title,
+.team-hero .page-hero-subtitle {
+  color: #fff;
+  text-shadow: 0 4px 24px rgba(0,0,0,1), 0 2px 12px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px) {
+  .team-hero .collage-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

@@ -8,8 +8,10 @@
   <link rel="icon" href="public/images/logo.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/pages/yatra-builder.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="css/components/map.css">
 <body>
   <!-- Preloader -->
   <div class="preloader" id="preloader">
@@ -92,6 +94,119 @@
     </div>
   </section>
 
+  <!-- Featured Journeys Await -->
+  <section class="section" id="destinations" style="background: var(--dark-800);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">📍 Featured Journeys</div>
+        <h2 class="section-title">Sacred Journeys Await</h2>
+        <p class="section-subtitle">Explore our most sought-after spiritual circuits and divine destinations</p>
+      </div>
+      <div class="destinations-grid stagger-children">
+        <div class="dest-card reveal">
+          <img src="public/images/hero-chardham.png" alt="Char Dham Yatra" loading="lazy">
+          <div class="dest-card-overlay">
+            <span class="dest-card-tag">⭐ Most Popular</span>
+            <h3>Char Dham Yatra</h3>
+            <p>Badrinath, Kedarnath, Gangotri & Yamunotri — the ultimate Himalayan pilgrimage circuit</p>
+            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+        <div class="dest-card reveal">
+          <img src="public/images/dest-ayodhya.png" alt="Ayodhya Kashi Prayagraj Naimisharanya" loading="lazy">
+          <div class="dest-card-overlay">
+            <span class="dest-card-tag">🛕 Sacred Circuit</span>
+            <h3>Ayodhya – Kashi – Prayagraj</h3>
+            <p>Ram Mandir, Kashi Vishwanath, Triveni Sangam & Naimisharanya in one divine journey</p>
+            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+        <div class="dest-card reveal">
+          <img src="public/images/dest-kashi.png" alt="Puri Jagannath" loading="lazy">
+          <div class="dest-card-overlay">
+            <span class="dest-card-tag">⭐ Sacred Dham</span>
+            <h3>Puri Jagannath Yatra</h3>
+            <p>Seek blessings at Jagannath Temple, witness the Rath Yatra & explore sacred Odisha</p>
+            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+        <div class="dest-card reveal">
+          <img src="public/images/dest-tirupati.png" alt="Tirupati Balaji" loading="lazy">
+          <div class="dest-card-overlay">
+            <span class="dest-card-tag">🌅 South India</span>
+            <h3>Tirupati Balaji</h3>
+            <p>Seek blessings at the richest temple in the world atop the sacred Tirumala hills</p>
+            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+        <div class="dest-card reveal">
+          <img src="public/images/dest-south-temple.png" alt="Nepal Pashupatinath & Muktinath" loading="lazy">
+          <div class="dest-card-overlay">
+            <span class="dest-card-tag">🇳🇵 Nepal</span>
+            <h3>Nepal – Pashupatinath & Muktinath</h3>
+            <p>Sacred pilgrimage to Pashupatinath Temple & Muktinath in the lap of the Himalayas</p>
+            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+        <div class="dest-card reveal">
+          <img src="public/images/dest-jyotirlinga.png" alt="Srisailam & Rameswaram" loading="lazy">
+          <div class="dest-card-overlay">
+            <span class="dest-card-tag">🔱 Jyotirlinga</span>
+            <h3>Srisailam & Rameswaram</h3>
+            <p>Visit Mallikarjuna Jyotirlinga at Srisailam & Ramanathaswamy Temple in Rameswaram</p>
+            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+        <div class="dest-card reveal">
+          <img src="public/images/dest-shirdi.png" alt="Somnath & Dwaraka" loading="lazy">
+          <div class="dest-card-overlay">
+            <span class="dest-card-tag">🛕 Gujarat</span>
+            <h3>Somnath & Dwaraka</h3>
+            <p>Somnath Jyotirlinga & Dwarkadhish Temple — Gujarat's most sacred pilgrimage circuit</p>
+            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+        <div class="dest-card reveal">
+          <img src="public/images/dest-adventure.png" alt="Himalayan Treks" loading="lazy">
+          <div class="dest-card-overlay">
+            <span class="dest-card-tag">🏔️ Adventure</span>
+            <h3>Himalayan Treks</h3>
+            <p>Kedarkantha, Valley of Flowers, Hemkund Sahib & more thrilling Himalayan adventures</p>
+            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: var(--space-3xl);" class="reveal">
+        <a href="destinations.html" class="btn btn-outline btn-lg">View All Destinations <i class="fas fa-map-marked-alt"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map Section -->
+  <section class="section">
+    <div class="container">
+      <div class="map-grid">
+        <div class="map-container reveal-left">
+          <div class="interactiveMap" style="width: 100%; height: 500px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(230,184,79,0.2); z-index: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></div>
+        </div>
+        <div class="map-info reveal-right">
+          <div class="section-badge">🌐 Sacred Footprints</div>
+          <h2>Our Reach Across India & Nepal</h2>
+          <div class="gold-divider"></div>
+          <p>
+            Experience divine tranquility across the subcontinent. From the snowy peaks of Kedarnath in the north to the vibrant shores of Rameswaram in the south, our curated journeys cover every sacred corner.
+          </p>
+          <ul class="feature-list" style="margin-top: 1.5rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-om" style="color: var(--gold-500);"></i> 12 Jyotirlingas carefully mapped out</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-mountain-sun" style="color: var(--gold-500);"></i> Complete Char Dham and regional Dhams</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-gopuram" style="color: var(--gold-500);"></i> Grand temple tours of South India</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-location-dot" style="color: var(--gold-500);"></i> End-to-end guidance from our Hyderabad base</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services Section -->
   <section class="section" id="services">
     <div class="container">
@@ -122,14 +237,14 @@
           <p>From budget stays to luxury hotels — we arrange the best accommodation suited to your comfort and preferences.</p>
         </div>
         <div class="service-card reveal">
+          <div class="service-icon">🙏</div>
+          <h3>Rituals & Poojas</h3>
+          <p>Custom ritual arrangements — Abhishekam, Homam, Archana, special Pujas at every temple as per your choice.</p>
+        </div>
+        <div class="service-card reveal">
           <div class="service-icon">⛰️</div>
           <h3>Adventure Treks</h3>
           <p>Himalayan treks, nature trails, and adventure excursions with experienced guides and complete safety arrangements.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">🍽️</div>
-          <h3>Meals & More</h3>
-          <p>Sattvic vegetarian meals, special dietary arrangements, and local cuisine experiences throughout your journey.</p>
         </div>
         <div class="service-card reveal">
           <div class="service-icon">📋</div>
@@ -190,96 +305,8 @@
     </div>
   </section>
 
-  <!-- Featured Destinations -->
-  <section class="section" id="destinations" style="background: var(--dark-800);">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-badge">📍 Featured Destinations</div>
-        <h2 class="section-title">Sacred Journeys Await</h2>
-        <p class="section-subtitle">Explore our most sought-after spiritual circuits and divine destinations</p>
-      </div>
-      <div class="destinations-grid stagger-children">
-        <div class="dest-card reveal">
-          <img src="public/images/hero-chardham.png" alt="Char Dham Yatra" loading="lazy">
-          <div class="dest-card-overlay">
-            <span class="dest-card-tag">⭐ Most Popular</span>
-            <h3>Char Dham Yatra</h3>
-            <p>Badrinath, Kedarnath, Gangotri & Yamunotri — the ultimate Himalayan pilgrimage circuit</p>
-            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
-          </div>
-        </div>
-        <div class="dest-card reveal">
-          <img src="public/images/dest-ayodhya.png" alt="Ayodhya Kashi Prayag" loading="lazy">
-          <div class="dest-card-overlay">
-            <span class="dest-card-tag">🛕 Sacred Circuit</span>
-            <h3>Ayodhya – Kashi – Prayag</h3>
-            <p>Visit Ram Mandir, Kashi Vishwanath & the holy Triveni Sangam in one divine journey</p>
-            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
-          </div>
-        </div>
-        <div class="dest-card reveal">
-          <img src="public/images/dest-kashi.png" alt="Kashi Vishwanath" loading="lazy">
-          <div class="dest-card-overlay">
-            <span class="dest-card-tag">🔱 Spiritual</span>
-            <h3>Kashi & Naimisharanya</h3>
-            <p>Experience the eternal city of Varanasi and the sacred Naimisharanya circuit</p>
-            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
-          </div>
-        </div>
-        <div class="dest-card reveal">
-          <img src="public/images/dest-tirupati.png" alt="Tirupati Balaji" loading="lazy">
-          <div class="dest-card-overlay">
-            <span class="dest-card-tag">🌅 South India</span>
-            <h3>Tirupati Balaji</h3>
-            <p>Seek blessings at the richest temple in the world atop the sacred Tirumala hills</p>
-            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
-          </div>
-        </div>
-        <div class="dest-card reveal">
-          <img src="public/images/dest-south-temple.png" alt="South India Temples" loading="lazy">
-          <div class="dest-card-overlay">
-            <span class="dest-card-tag">🏛️ Heritage</span>
-            <h3>South India Temple Tour</h3>
-            <p>Meenakshi, Rameswaram, Kanyakumari & more — explore the grand Dravidian temples</p>
-            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
-          </div>
-        </div>
-        <div class="dest-card reveal">
-          <img src="public/images/dest-shirdi.png" alt="Shirdi & Pandharpur" loading="lazy">
-          <div class="dest-card-overlay">
-            <span class="dest-card-tag">🛕 Sai Baba</span>
-            <h3>Shirdi & Pandharpur</h3>
-            <p>Experience spiritual calm at Sai Baba's Samadhi Temple and Vitthal Rukmini Temple</p>
-            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
-          </div>
-        </div>
-        <div class="dest-card reveal">
-          <img src="public/images/dest-jyotirlinga.png" alt="12 Jyotirlingas" loading="lazy">
-          <div class="dest-card-overlay">
-            <span class="dest-card-tag">🔱 Lord Shiva</span>
-            <h3>12 Jyotirlingas Circuit</h3>
-            <p>Pilgrimage to all 12 holy shrines of Lord Shiva across India's sacred landscape</p>
-            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
-          </div>
-        </div>
-        <div class="dest-card reveal">
-          <img src="public/images/dest-adventure.png" alt="Himalayan Adventures" loading="lazy">
-          <div class="dest-card-overlay">
-            <span class="dest-card-tag">🏔️ Adventure</span>
-            <h3>Himalayan Treks</h3>
-            <p>Kedarkantha, Valley of Flowers, Roopkund & more thrilling Himalayan adventures</p>
-            <a href="services.html" class="dest-card-link">Explore Package <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6 3l5 5-5 5"/></svg></a>
-          </div>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: var(--space-3xl);" class="reveal">
-        <a href="destinations.html" class="btn btn-outline btn-lg">View All Destinations <i class="fas fa-map-marked-alt"></i></a>
-      </div>
-    </div>
-  </section>
-
   <!-- Why Choose Us -->
-  <section class="section why-section" id="why">
+  <section class="section why-section" id="why" style="background: var(--dark-800);">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-badge">🌟 Why Yatrakaar</div>
@@ -387,7 +414,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="public/images/logo.png" alt="Yatrakaar Logo">
-          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India. Fully customized yatras with expert on-ground support.</p>
+          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India & Nepal. Fully customized yatras with expert on-ground support.</p>
           <div class="footer-social">
             <a href="https://instagram.com/yatrakaar" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://facebook.com/yatrakaar" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -411,8 +438,9 @@
           <h4>Popular Yatras</h4>
           <ul>
             <li><a href="services.html">Char Dham Yatra</a></li>
-            <li><a href="services.html">Ayodhya – Kashi – Prayag</a></li>
-            <li><a href="services.html">Naimisharanya Circuit</a></li>
+            <li><a href="services.html">Ayodhya – Kashi – Prayagraj</a></li>
+            <li><a href="services.html">Puri Jagannath</a></li>
+            <li><a href="services.html">Nepal – Pashupatinath</a></li>
             <li><a href="services.html">South India Temples</a></li>
             <li><a href="services.html">Himalayan Treks</a></li>
             <li><a href="services.html">Custom Yatra</a></li>
@@ -464,6 +492,9 @@
   </button>
 
   <script src="js/main.js" type="module"></script>
+  <script src="js/yatra-builder.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/map.js"></script>
   <script>
     // --- Hero Carousel Script ---
     const heroImages = document.querySelectorAll('.hero-bg img');

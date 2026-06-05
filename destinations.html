@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sacred Destinations — Yatrakaar | Spiritual Circuits & Adventures</title>
-  <meta name="description" content="Explore Yatrakaar's extensive list of spiritual circuits across India, from Char Dham, Ayodhya, Kashi, to South India Temples, Jyotirlingas, and treks.">
+  <meta name="description" content="Explore Yatrakaar's complete list of spiritual yatras across India & Nepal — Char Dham, Puri, Ayodhya, Kashi, Tirupati, Rameswaram, Nepal and more.">
   <link rel="icon" href="public/images/logo.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages/about.css">
   <link rel="stylesheet" href="css/pages/destinations.css">
+  <link rel="stylesheet" href="css/pages/yatra-builder.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="css/components/map.css">
 </head>
 <body>
   <div class="preloader" id="preloader"><div class="preloader-content"><div class="preloader-om"><img src="public/images/logo.png" alt="Yatrakaar Logo"></div><div class="preloader-bar"><div class="preloader-bar-fill"></div></div></div></div>
@@ -39,13 +42,24 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="page-hero">
-    <div class="page-hero-bg" style="background: linear-gradient(180deg, rgba(13,11,26,0.3) 0%, rgba(13,11,26,0.95) 100%), url('public/images/dest-hero.png') center/cover no-repeat;"></div>
+  <!-- Hero Section with Collage -->
+  <section class="page-hero collage-hero">
+    <div class="page-hero-bg">
+      <div class="collage-images">
+        <img src="public/images/hero-chardham.png" alt="Char Dham" loading="lazy">
+        <img src="public/images/dest-ayodhya.png" alt="Ayodhya" loading="lazy">
+        <img src="public/images/dest-kashi.png" alt="Kashi" loading="lazy">
+        <img src="public/images/dest-tirupati.png" alt="Tirupati" loading="lazy">
+        <img src="public/images/dest-south-temple.png" alt="South Temple" loading="lazy">
+        <img src="public/images/dest-jyotirlinga.png" alt="Jyotirlinga" loading="lazy">
+        <img src="public/images/dest-adventure.png" alt="Adventure" loading="lazy">
+        <img src="public/images/dest-shirdi.png" alt="Shirdi" loading="lazy">
+      </div>
+    </div>
     <div class="page-hero-content">
       <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Destinations</span></div>
       <h1 class="page-hero-title">Sacred Destinations</h1>
-      <p class="page-hero-subtitle">Explore India's divine landscapes, historic temples, and adventure circuits</p>
+      <p class="page-hero-subtitle">Explore India & Nepal's divine landscapes, historic temples, and adventure circuits</p>
     </div>
   </section>
 
@@ -55,155 +69,228 @@
       <!-- Tabs Filter -->
       <div class="dest-tabs-container reveal">
         <div class="dest-tabs">
-          <button class="dest-tab-btn active" data-filter="all">All Circuits</button>
+          <button class="dest-tab-btn active" data-filter="all">All Yatras</button>
           <button class="dest-tab-btn" data-filter="north">North India</button>
-          <button class="dest-tab-btn" data-filter="central">Central & West</button>
           <button class="dest-tab-btn" data-filter="south">South India</button>
+          <button class="dest-tab-btn" data-filter="west">West India</button>
+          <button class="dest-tab-btn" data-filter="nepal">Nepal</button>
           <button class="dest-tab-btn" data-filter="adventures">Treks & Adventures</button>
         </div>
       </div>
 
       <!-- Grid -->
       <div class="dest-grid stagger-children">
+        <!-- ===== MAIN YATRAS ===== -->
         <!-- Char Dham Yatra -->
         <div class="dest-grid-card reveal" data-region="north">
           <div class="dest-card-img-wrap">
-            <span class="dest-region-badge">North India</span>
+            <span class="dest-region-badge">⭐ Main Yatra</span>
             <img src="public/images/hero-chardham.png" alt="Char Dham Yatra" loading="lazy">
           </div>
           <div class="dest-grid-content">
             <div>
               <h3>Char Dham Yatra</h3>
-              <p>Pilgrimage to Badrinath (Lord Vishnu), Kedarnath (Lord Shiva), Gangotri (Goddess Ganga), and Yamunotri (Goddess Yamuna) in the serene Himalayas.</p>
+              <p>Badrinath, Kedarnath, Gangotri & Yamunotri — the ultimate Himalayan pilgrimage covering all four sacred abodes.</p>
               <ul class="dest-features">
-                <li>VIP Darshan & Pujas</li>
-                <li>AC Vehicles & Stays</li>
+                <li>VIP Darshan & Special Pujas</li>
                 <li>Helicopter options available</li>
+                <li>Custom rituals add-on</li>
               </ul>
             </div>
             <div class="dest-card-footer">
-              <span class="dest-duration">⏱️ 10 - 12 Days</span>
+              <span class="dest-duration">⏱️ 10 – 12 Days</span>
               <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
             </div>
           </div>
         </div>
 
-        <!-- Ayodhya - Kashi - Prayag -->
+        <!-- Do Dham -->
         <div class="dest-grid-card reveal" data-region="north">
           <div class="dest-card-img-wrap">
             <span class="dest-region-badge">North India</span>
-            <img src="public/images/dest-ayodhya.png" alt="Ayodhya - Kashi - Prayag Yatra" loading="lazy">
+            <img src="public/images/hero-chardham.png" alt="Do Dham Yatra" loading="lazy">
           </div>
           <div class="dest-grid-content">
             <div>
-              <h3>Ayodhya – Kashi – Prayag</h3>
-              <p>Seek blessings at Shri Ram Janmabhoomi in Ayodhya, seek liberation at Kashi Vishwanath, and take a holy dip in Prayagraj Sangam.</p>
+              <h3>Do Dham Yatra</h3>
+              <p>Visit Badrinath & Kedarnath — the two most sacred Himalayan dhams in one focused pilgrimage.</p>
               <ul class="dest-features">
-                <li>Ram Mandir VIP slot</li>
-                <li>Varanasi Ganga Aarti boat</li>
-                <li>Triveni Sangam rituals</li>
+                <li>Badrinath & Kedarnath temples</li>
+                <li>Helicopter option for Kedarnath</li>
+                <li>Custom rituals add-on</li>
               </ul>
             </div>
             <div class="dest-card-footer">
-              <span class="dest-duration">⏱️ 6 - 8 Days</span>
+              <span class="dest-duration">⏱️ 7 – 9 Days</span>
               <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
             </div>
           </div>
         </div>
 
-        <!-- Kashi & Naimisharanya -->
+        <!-- Ayodhya – Kashi – Prayagraj – Naimisharanya -->
+        <div class="dest-grid-card reveal" data-region="north">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">⭐ Main Yatra</span>
+            <img src="public/images/dest-ayodhya.png" alt="Ayodhya Kashi Prayagraj" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Ayodhya – Kashi – Prayagraj – Naimisharanya</h3>
+              <p>Ram Mandir, Kashi Vishwanath, Triveni Sangam & Naimisharanya forest — the complete North India sacred circuit.</p>
+              <ul class="dest-features">
+                <li>Ram Mandir VIP Darshan</li>
+                <li>Ganga Aarti boat experience</li>
+                <li>Naimisharanya Chakra Tirth</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 7 – 10 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puri Jagannath -->
+        <div class="dest-grid-card reveal" data-region="north">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">⭐ Main Yatra</span>
+            <img src="public/images/dest-kashi.png" alt="Puri Jagannath" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Puri Jagannath</h3>
+              <p>Seek blessings at the legendary Jagannath Temple — one of the Char Dhams. Major local temples & Konark Sun Temple covered.</p>
+              <ul class="dest-features">
+                <li>Jagannath Temple VIP darshan</li>
+                <li>Konark Sun Temple</li>
+                <li>Lingaraj & Mahaprasad</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 4 – 6 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nepal -->
+        <div class="dest-grid-card reveal" data-region="nepal">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">⭐ Main Yatra – Nepal</span>
+            <img src="public/images/dest-south-temple.png" alt="Nepal Pashupatinath" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Nepal – Pashupatinath & Muktinath</h3>
+              <p>Sacred pilgrimage to Pashupatinath Temple in Kathmandu & Muktinath (108 water spouts) in the Himalayan Annapurna region.</p>
+              <ul class="dest-features">
+                <li>Pashupatinath Temple darshan</li>
+                <li>Muktinath 108 waterspouts</li>
+                <li>Visa & flight assistance</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 5 – 7 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== NORTH INDIA ===== -->
+        <!-- Rishikesh & Haridwar -->
         <div class="dest-grid-card reveal" data-region="north">
           <div class="dest-card-img-wrap">
             <span class="dest-region-badge">North India</span>
-            <img src="public/images/dest-kashi.png" alt="Kashi & Naimisharanya" loading="lazy">
+            <img src="public/images/dest-adventure.png" alt="Rishikesh & Haridwar" loading="lazy">
           </div>
           <div class="dest-grid-content">
             <div>
-              <h3>Kashi & Naimisharanya</h3>
-              <p>Combine Varanasi's sacred ghats with the mystical Naimisharanya forest, where sage Ved Vyas divided the Vedas and Puranas.</p>
+              <h3>Rishikesh & Haridwar</h3>
+              <p>The yoga capital & gateway to the Himalayas — Ganga Aarti at Har Ki Pauri, Triveni Ghat, Ram Jhula & ashram visits.</p>
               <ul class="dest-features">
-                <li>Chakra Tirth Holy Bath</li>
-                <li>Vyas Gaddi tapovan visit</li>
-                <li>Sarnath sightseeing</li>
+                <li>Har Ki Pauri Ganga Aarti</li>
+                <li>Ashram & yoga experiences</li>
+                <li>Adventure activities available</li>
               </ul>
             </div>
             <div class="dest-card-footer">
-              <span class="dest-duration">⏱️ 5 - 7 Days</span>
+              <span class="dest-duration">⏱️ 3 – 5 Days</span>
               <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
             </div>
           </div>
         </div>
 
-        <!-- Shirdi & Pandharpur -->
-        <div class="dest-grid-card reveal" data-region="central">
+        <!-- Chitrakoot -->
+        <div class="dest-grid-card reveal" data-region="north">
           <div class="dest-card-img-wrap">
-            <span class="dest-region-badge">Central & West</span>
-            <img src="public/images/dest-shirdi.png" alt="Shirdi & Pandharpur Yatra" loading="lazy">
+            <span class="dest-region-badge">North India</span>
+            <img src="public/images/dest-ayodhya.png" alt="Chitrakoot" loading="lazy">
           </div>
           <div class="dest-grid-content">
             <div>
-              <h3>Shirdi & Pandharpur</h3>
-              <p>Offer prayers at Sai Baba's Samadhi Temple in Shirdi and visit Vitthal-Rukmini's holy shrine on the banks of Chandrabhaga in Pandharpur.</p>
+              <h3>Chitrakoot</h3>
+              <p>Where Lord Rama spent 11 years of exile — Kamadgiri Parikrama, Hanuman Dhara, Sati Anusuya & Gupt Godavari.</p>
               <ul class="dest-features">
-                <li>Sai Baba Kakad Aarti</li>
-                <li>Vitthal Temple special pass</li>
-                <li>Shani Shingnapur visit</li>
+                <li>Kamadgiri Parikrama</li>
+                <li>Ram Ghat & Bharat Milap</li>
+                <li>Custom rituals add-on</li>
               </ul>
             </div>
             <div class="dest-card-footer">
-              <span class="dest-duration">⏱️ 5 - 6 Days</span>
+              <span class="dest-duration">⏱️ 3 – 4 Days</span>
               <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
             </div>
           </div>
         </div>
 
-        <!-- 12 Jyotirlingas Circuit -->
-        <div class="dest-grid-card reveal" data-region="central">
+        <!-- Mathura & Vrindavan -->
+        <div class="dest-grid-card reveal" data-region="north">
           <div class="dest-card-img-wrap">
-            <span class="dest-region-badge">Central & West</span>
-            <img src="public/images/dest-jyotirlinga.png" alt="12 Jyotirlingas Yatra" loading="lazy">
+            <span class="dest-region-badge">North India</span>
+            <img src="public/images/dest-shirdi.png" alt="Mathura & Vrindavan" loading="lazy">
           </div>
           <div class="dest-grid-content">
             <div>
-              <h3>12 Jyotirlingas Circuit</h3>
-              <p>Journey across the length of India to seek blessings at all 12 self-manifested Jyotirlingas of Lord Shiva in absolute comfort.</p>
+              <h3>Mathura & Vrindavan</h3>
+              <p>Birthplace of Lord Krishna — Krishna Janmabhoomi, Banke Bihari, Prem Mandir, ISKCON & Govardhan Parikrama.</p>
               <ul class="dest-features">
-                <li>Segmented options available</li>
-                <li>Somnath, Mahakal & Omkareshwar</li>
-                <li>Special Pujas arranged</li>
+                <li>Krishna Janmabhoomi Temple</li>
+                <li>Banke Bihari & Prem Mandir</li>
+                <li>Govardhan Parikrama</li>
               </ul>
             </div>
             <div class="dest-card-footer">
-              <span class="dest-duration">⏱️ Custom / Multi-part</span>
+              <span class="dest-duration">⏱️ 3 – 5 Days</span>
               <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
             </div>
           </div>
         </div>
 
-        <!-- South India Temple Tour -->
-        <div class="dest-grid-card reveal" data-region="south">
+        <!-- Hemkund Sahib -->
+        <div class="dest-grid-card reveal" data-region="north">
           <div class="dest-card-img-wrap">
-            <span class="dest-region-badge">South India</span>
-            <img src="public/images/dest-south-temple.png" alt="South India Temple Tour" loading="lazy">
+            <span class="dest-region-badge">North India</span>
+            <img src="public/images/dest-adventure.png" alt="Hemkund Sahib" loading="lazy">
           </div>
           <div class="dest-grid-content">
             <div>
-              <h3>South India Temple Tour</h3>
-              <p>Explore Dravidian heritage architecture at Madurai Meenakshi Temple, Rameswaram Jyotirlinga, and the sacred land of Kanyakumari.</p>
+              <h3>Hemkund Sahib</h3>
+              <p>Sacred Sikh pilgrimage to the glacial lake Gurudwara at 15,200 ft in the Himalayas, combined with Valley of Flowers.</p>
               <ul class="dest-features">
-                <li>Rameswaram 22 holy wells bath</li>
-                <li>Vivekananda Rock Memorial</li>
-                <li>Srirangam Ranganathaswamy</li>
+                <li>Hemkund Sahib Gurudwara</li>
+                <li>Valley of Flowers trek</li>
+                <li>Badrinath add-on option</li>
               </ul>
             </div>
             <div class="dest-card-footer">
-              <span class="dest-duration">⏱️ 7 - 9 Days</span>
+              <span class="dest-duration">⏱️ 6 – 8 Days</span>
               <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
             </div>
           </div>
         </div>
 
-        <!-- Tirupati Balaji Yatra -->
+        <!-- ===== SOUTH INDIA ===== -->
+        <!-- Tirupati -->
         <div class="dest-grid-card reveal" data-region="south">
           <div class="dest-card-img-wrap">
             <span class="dest-region-badge">South India</span>
@@ -211,21 +298,230 @@
           </div>
           <div class="dest-grid-content">
             <div>
-              <h3>Tirupati Balaji Yatra</h3>
-              <p>Complete darshan planning at Tirumala Sri Venkateswara Temple, Tiruchanur Padmavathi, and Kapila Theertham in Chittoor district.</p>
+              <h3>Tirupati</h3>
+              <p>Sri Venkateswara Temple on Tirumala hills — the world's richest temple. Srikalahasti & Tiruchanur Padmavathi covered.</p>
               <ul class="dest-features">
-                <li>Special Entry Darshan ticket</li>
-                <li>Laddoo prasadam slots</li>
+                <li>VIP / Special Darshan</li>
                 <li>Srikalahasti Rahu-Ketu puja</li>
+                <li>Custom rituals add-on</li>
               </ul>
             </div>
             <div class="dest-card-footer">
-              <span class="dest-duration">⏱️ 2 - 3 Days</span>
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
               <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
             </div>
           </div>
         </div>
 
+        <!-- Srisailam -->
+        <div class="dest-grid-card reveal" data-region="south">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">South India</span>
+            <img src="public/images/dest-jyotirlinga.png" alt="Srisailam" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Srisailam</h3>
+              <p>Mallikarjuna Jyotirlinga & Bhramaramba Shakti Peetham — one of only two places where both exist together.</p>
+              <ul class="dest-features">
+                <li>Mallikarjuna Swamy darshan</li>
+                <li>Bhramaramba Devi temple</li>
+                <li>Patala Ganga & Sakshi Ganapathi</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Madurai Meenakshi -->
+        <div class="dest-grid-card reveal" data-region="south">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">South India</span>
+            <img src="public/images/dest-south-temple.png" alt="Madurai Meenakshi" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Madurai Meenakshi</h3>
+              <p>The magnificent Meenakshi Amman Temple — stunning Dravidian architecture, 1000-pillar hall & Sundareswarar Temple.</p>
+              <ul class="dest-features">
+                <li>Meenakshi Amman darshan</li>
+                <li>1000-pillar hall visit</li>
+                <li>Custom rituals add-on</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rameswaram -->
+        <div class="dest-grid-card reveal" data-region="south">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">South India</span>
+            <img src="public/images/dest-south-temple.png" alt="Rameswaram" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Rameswaram</h3>
+              <p>Ramanathaswamy Temple — one of the 12 Jyotirlingas. 22 holy wells bath, Pamban Bridge & Dhanushkodi.</p>
+              <ul class="dest-features">
+                <li>Ramanathaswamy Jyotirlinga</li>
+                <li>22 Theertham holy bath</li>
+                <li>Dhanushkodi visit</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thiruvananthapuram -->
+        <div class="dest-grid-card reveal" data-region="south">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">South India</span>
+            <img src="public/images/dest-south-temple.png" alt="Thiruvananthapuram" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Thiruvananthapuram</h3>
+              <p>Sree Padmanabhaswamy Temple — the legendary temple of Lord Vishnu reclining on Ananta (Adi Shesha).</p>
+              <ul class="dest-features">
+                <li>Padmanabhaswamy darshan</li>
+                <li>Attukal Bhagavathy Temple</li>
+                <li>Custom rituals add-on</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arunachalam -->
+        <div class="dest-grid-card reveal" data-region="south">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">South India</span>
+            <img src="public/images/dest-jyotirlinga.png" alt="Arunachalam" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Arunachalam (Tiruvannamalai)</h3>
+              <p>Arunachaleswarar Temple — the Fire Lingam. Sacred Girivalam (hill circumambulation) around Arunachala hill.</p>
+              <ul class="dest-features">
+                <li>Arunachaleswarar darshan</li>
+                <li>Girivalam pradakshina</li>
+                <li>Ramana Maharshi Ashram</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ahobilam -->
+        <div class="dest-grid-card reveal" data-region="south">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">South India</span>
+            <img src="public/images/dest-tirupati.png" alt="Ahobilam" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Ahobilam</h3>
+              <p>The 9 Narasimha Swamy temples (Nava Narasimha Kshetra) nestled in the Nallamala Hills of Andhra Pradesh.</p>
+              <ul class="dest-features">
+                <li>Upper & Lower Ahobilam</li>
+                <li>9 Narasimha temples trek</li>
+                <li>Custom rituals add-on</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== WEST INDIA ===== -->
+        <!-- Somnath -->
+        <div class="dest-grid-card reveal" data-region="west">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">West India</span>
+            <img src="public/images/dest-jyotirlinga.png" alt="Somnath" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Somnath</h3>
+              <p>The first of the 12 Jyotirlingas, standing majestically on the western coast of Gujarat — rebuilt 17 times!</p>
+              <ul class="dest-features">
+                <li>Somnath Jyotirlinga darshan</li>
+                <li>Light & Sound show</li>
+                <li>Custom rituals add-on</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dwaraka -->
+        <div class="dest-grid-card reveal" data-region="west">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">West India</span>
+            <img src="public/images/dest-shirdi.png" alt="Dwaraka" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Dwaraka</h3>
+              <p>Dwarkadhish Temple — the legendary kingdom of Lord Krishna and one of the Char Dhams. Bet Dwarka & Nageshwar.</p>
+              <ul class="dest-features">
+                <li>Dwarkadhish Temple darshan</li>
+                <li>Bet Dwarka & Nageshwar</li>
+                <li>Custom rituals add-on</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 – 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nashik & Ujjain -->
+        <div class="dest-grid-card reveal" data-region="west">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">West India</span>
+            <img src="public/images/dest-jyotirlinga.png" alt="Nashik & Ujjain" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Nashik & Ujjain</h3>
+              <p>Trimbakeshwar Jyotirlinga in Nashik & Mahakaleshwar Jyotirlinga in Ujjain — two of the holiest Shiva shrines.</p>
+              <ul class="dest-features">
+                <li>Trimbakeshwar darshan</li>
+                <li>Mahakaleshwar Bhasma Aarti</li>
+                <li>Kumbh Mela locations</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 4 – 6 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== ADVENTURES ===== -->
         <!-- Himalayan Treks -->
         <div class="dest-grid-card reveal" data-region="adventures">
           <div class="dest-card-img-wrap">
@@ -234,16 +530,16 @@
           </div>
           <div class="dest-grid-content">
             <div>
-              <h3>Himalayan Adventures</h3>
-              <p>High-altitude treks like Kedarkantha, Valley of Flowers, Roopkund, and Tungnath-Chandrashila with complete safety gears and guides.</p>
+              <h3>Himalayan Treks & Adventures</h3>
+              <p>Kedarkantha, Valley of Flowers, Roopkund, Chandrashila & more epic trails with safety gear and expert guides.</p>
               <ul class="dest-features">
                 <li>Certified Trek Leaders</li>
-                <li>Warm dome tents & sleeping bags</li>
-                <li>High safety & medical kits</li>
+                <li>Camping & safety equipment</li>
+                <li>Medical kits included</li>
               </ul>
             </div>
             <div class="dest-card-footer">
-              <span class="dest-duration">⏱️ 5 - 8 Days</span>
+              <span class="dest-duration">⏱️ 5 – 8 Days</span>
               <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
             </div>
           </div>
@@ -253,8 +549,33 @@
         <div class="dest-grid-card custom-builder-card reveal" data-region="all">
           <div class="custom-card-icon">✨</div>
           <h3>Custom Builder</h3>
-          <p>Don't see your target temple or circuit listed? We offer fully custom yatras to anywhere in India. Tell us when, where, and how many days.</p>
+          <p>Don't see your target temple or circuit listed? We offer fully custom yatras to anywhere in India & Nepal. Tell us when, where, and how many days. Custom rituals & poojas available at every destination.</p>
           <a href="contact.html" class="btn btn-primary btn-lg">Build My Yatra <i class="fas fa-edit"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map Section -->
+  <section class="section" style="background: var(--dark-850);">
+    <div class="container">
+      <div class="map-grid">
+        <div class="map-container reveal-left">
+          <div class="interactiveMap" style="width: 100%; height: 500px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(230,184,79,0.2); z-index: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></div>
+        </div>
+        <div class="map-info reveal-right">
+          <div class="section-badge">🌐 Sacred Footprints</div>
+          <h2>Our Reach Across India & Nepal</h2>
+          <div class="gold-divider"></div>
+          <p>
+            Experience divine tranquility across the subcontinent. From the snowy peaks of Kedarnath in the north to the vibrant shores of Rameswaram in the south, our curated journeys cover every sacred corner.
+          </p>
+          <ul class="feature-list" style="margin-top: 1.5rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-om" style="color: var(--gold-500);"></i> 12 Jyotirlingas carefully mapped out</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-mountain-sun" style="color: var(--gold-500);"></i> Complete Char Dham and regional Dhams</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-gopuram" style="color: var(--gold-500);"></i> Grand temple tours of South India</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-location-dot" style="color: var(--gold-500);"></i> End-to-end guidance from our Hyderabad base</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -266,7 +587,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="public/images/logo.png" alt="Yatrakaar Logo">
-          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India. Fully customized yatras with expert on-ground support.</p>
+          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India & Nepal. Fully customized yatras with expert on-ground support.</p>
           <div class="footer-social">
             <a href="https://instagram.com/yatrakaar" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://facebook.com/yatrakaar" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -290,9 +611,9 @@
           <h4>Popular Yatras</h4>
           <ul>
             <li><a href="services.html">Char Dham Yatra</a></li>
-            <li><a href="services.html">Ayodhya – Kashi – Prayag</a></li>
-            <li><a href="services.html">South India Temples</a></li>
-            <li><a href="services.html">Himalayan Treks</a></li>
+            <li><a href="services.html">Ayodhya – Kashi – Prayagraj</a></li>
+            <li><a href="services.html">Puri Jagannath</a></li>
+            <li><a href="services.html">Nepal – Pashupatinath</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -322,6 +643,9 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
   <script src="js/main.js" type="module"></script>
+  <script src="js/yatra-builder.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/map.js"></script>
   <script>
     // --- Destination Filtering Script ---
     const tabButtons = document.querySelectorAll('.dest-tab-btn');
@@ -329,14 +653,12 @@
 
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Toggle Active Tab class
         tabButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
         const filterValue = btn.getAttribute('data-filter');
 
         destCards.forEach(card => {
-          // Keep custom builder always visible, or hide if filters applied (except all)
           const region = card.getAttribute('data-region');
           
           if (card.classList.contains('custom-builder-card')) {

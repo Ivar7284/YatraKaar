@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Packages & Services — Yatrakaar | Custom Yatra Plans</title>
-  <meta name="description" content="Explore Yatrakaar's fully customizable yatra packages — Char Dham, Ayodhya-Kashi-Prayag, South India temples, Himalayan treks, and more.">
+  <meta name="description" content="Explore Yatrakaar's fully customizable yatra packages — Char Dham, Ayodhya-Kashi-Prayagraj, Nepal, South India temples, Himalayan treks, and more.">
   <link rel="icon" href="public/images/logo.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages/about.css">
   <link rel="stylesheet" href="css/pages/services.css">
+  <link rel="stylesheet" href="css/pages/yatra-builder.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="css/components/map.css">
 </head>
 <body>
   <div class="preloader" id="preloader"><div class="preloader-content"><div class="preloader-om"><img src="public/images/logo.png" alt="Yatrakaar Logo"></div><div class="preloader-bar"><div class="preloader-bar-fill"></div></div></div></div>
@@ -39,9 +42,20 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="page-hero">
-    <div class="page-hero-bg"></div>
+  <!-- Hero Section with Collage -->
+  <section class="page-hero collage-hero">
+    <div class="page-hero-bg">
+      <div class="collage-images">
+        <img src="public/images/hero-chardham.png" alt="Char Dham" loading="lazy">
+        <img src="public/images/dest-ayodhya.png" alt="Ayodhya" loading="lazy">
+        <img src="public/images/dest-tirupati.png" alt="Tirupati" loading="lazy">
+        <img src="public/images/dest-south-temple.png" alt="South India" loading="lazy">
+        <img src="public/images/dest-kashi.png" alt="Kashi" loading="lazy">
+        <img src="public/images/dest-jyotirlinga.png" alt="Jyotirlinga" loading="lazy">
+        <img src="public/images/dest-adventure.png" alt="Adventure" loading="lazy">
+        <img src="public/images/dest-shirdi.png" alt="Shirdi" loading="lazy">
+      </div>
+    </div>
     <div class="page-hero-content">
       <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Packages</span></div>
       <h1 class="page-hero-title">Yatra Packages</h1>
@@ -60,7 +74,7 @@
           <div class="custom-feature reveal">
             <div class="custom-feature-icon">📍</div>
             <h4>Choose Destinations</h4>
-            <p>Pick any temples, cities, or circuits across India</p>
+            <p>Pick any temples, cities, or circuits across India & Nepal</p>
           </div>
           <div class="custom-feature reveal">
             <div class="custom-feature-icon">📅</div>
@@ -117,7 +131,7 @@
       <div class="section-header reveal">
         <div class="section-badge">📦 Popular Packages</div>
         <h2 class="section-title">Curated Yatra Circuits</h2>
-        <p class="section-subtitle">Popular starting points — each fully customizable to your preferences</p>
+        <p class="section-subtitle">Popular starting points — each fully customizable to your preferences. Custom rituals & poojas available as add-ons.</p>
       </div>
       <div class="packages-grid stagger-children">
         <!-- Char Dham -->
@@ -135,7 +149,7 @@
               <li>Comfortable hill station stays</li>
               <li>Experienced mountain drivers</li>
               <li>VIP darshan arrangements</li>
-              <li>Helicopter options available</li>
+              <li>Custom rituals & poojas add-on</li>
             </ul>
             <div class="package-pricing">
               <span class="package-price">Contact for Custom Quote</span>
@@ -144,44 +158,22 @@
           </div>
         </div>
 
-        <!-- Ayodhya Kashi Prayag -->
-        <div class="package-card reveal">
+        <!-- Ayodhya Kashi Prayagraj Naimisharanya -->
+        <div class="package-card featured reveal">
           <div class="package-image">
-            <img src="public/images/dest-ayodhya.png" alt="Ayodhya Kashi Prayag" loading="lazy">
+            <img src="public/images/dest-ayodhya.png" alt="Ayodhya Kashi Prayagraj" loading="lazy">
+            <span class="package-featured-badge">Sacred Circuit</span>
           </div>
           <div class="package-content">
-            <span class="package-tag">🛕 Sacred Circuit</span>
-            <h3>Ayodhya – Kashi – Prayag</h3>
-            <p>Experience the holy trinity — Ram Mandir in Ayodhya, Kashi Vishwanath in Varanasi, and Triveni Sangam in Prayagraj.</p>
+            <span class="package-tag">🛕 North India</span>
+            <h3>Ayodhya – Kashi – Prayagraj – Naimisharanya</h3>
+            <p>The complete sacred circuit — Ram Mandir, Kashi Vishwanath, Triveni Sangam & the ancient Naimisharanya forest.</p>
             <ul class="package-highlights">
               <li>Ram Mandir VIP darshan</li>
               <li>Kashi Vishwanath special puja</li>
-              <li>Ganga Aarti experience</li>
-              <li>Triveni Sangam holy dip</li>
-              <li>Comfortable AC transport</li>
-            </ul>
-            <div class="package-pricing">
-              <span class="package-price">Contact for Custom Quote</span>
-              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Kashi & Naimisharanya -->
-        <div class="package-card reveal">
-          <div class="package-image">
-            <img src="public/images/dest-kashi.png" alt="Naimisharanya Circuit" loading="lazy">
-          </div>
-          <div class="package-content">
-            <span class="package-tag">🔱 Spiritual</span>
-            <h3>Kashi & Naimisharanya Circuit</h3>
-            <p>Visit the ancient forest where the Puranas were narrated, combined with the eternal spiritual city of Varanasi.</p>
-            <ul class="package-highlights">
+              <li>Ganga Aarti & Sangam rituals</li>
               <li>Naimisharanya Chakra Tirth</li>
-              <li>88,000 Rishis tapasthali</li>
-              <li>Kashi temples & ghats</li>
-              <li>Sarnath Buddhist site</li>
-              <li>Expert local guides</li>
+              <li>Custom rituals & poojas add-on</li>
             </ul>
             <div class="package-pricing">
               <span class="package-price">Contact for Custom Quote</span>
@@ -190,22 +182,22 @@
           </div>
         </div>
 
-        <!-- Shirdi & Pandharpur -->
+        <!-- Puri Jagannath -->
         <div class="package-card featured reveal">
           <div class="package-image">
-            <img src="public/images/dest-shirdi.png" alt="Shirdi & Pandharpur Yatra" loading="lazy">
-            <span class="package-featured-badge">Devotion Circuit</span>
+            <img src="public/images/dest-kashi.png" alt="Puri Jagannath" loading="lazy">
+            <span class="package-featured-badge">Sacred Dham</span>
           </div>
           <div class="package-content">
-            <span class="package-tag">🕉️ Maharashtra</span>
-            <h3>Shirdi & Pandharpur Yatra</h3>
-            <p>Seek blessings at Sai Baba's Samadhi Temple in Shirdi and the legendary Vitthal Rukmini Temple in Pandharpur.</p>
+            <span class="package-tag">🕉️ East India</span>
+            <h3>Puri Jagannath Yatra</h3>
+            <p>Seek divine blessings at the legendary Jagannath Temple in Puri — one of the Char Dhams and major local temples.</p>
             <ul class="package-highlights">
-              <li>Shirdi Sai Baba Kakad Aarti</li>
-              <li>Pandharpur Vitthal Temple darshan</li>
-              <li>Shani Shingnapur temple visit</li>
-              <li>Comfortable hotel stays</li>
-              <li>AC transport from Pune/Mumbai</li>
+              <li>Jagannath Temple VIP darshan</li>
+              <li>Konark Sun Temple visit</li>
+              <li>Chilika Lake & Lingaraj Temple</li>
+              <li>Mahaprasad experience</li>
+              <li>Custom rituals & poojas add-on</li>
             </ul>
             <div class="package-pricing">
               <span class="package-price">Contact for Custom Quote</span>
@@ -214,44 +206,22 @@
           </div>
         </div>
 
-        <!-- 12 Jyotirlinga Circuit -->
-        <div class="package-card reveal">
+        <!-- Nepal -->
+        <div class="package-card featured reveal">
           <div class="package-image">
-            <img src="public/images/dest-jyotirlinga.png" alt="12 Jyotirlingas" loading="lazy">
+            <img src="public/images/dest-south-temple.png" alt="Nepal Pashupatinath Muktinath" loading="lazy">
+            <span class="package-featured-badge">International</span>
           </div>
           <div class="package-content">
-            <span class="package-tag">🔱 Lord Shiva</span>
-            <h3>12 Jyotirlingas Circuit</h3>
-            <p>Embark on the ultimate Shaivite pilgrimage, visiting all 12 holy shrines of Lord Shiva scattered across India.</p>
+            <span class="package-tag">🇳🇵 Nepal</span>
+            <h3>Nepal – Pashupatinath & Muktinath</h3>
+            <p>Sacred pilgrimage to Pashupatinath Temple in Kathmandu & Muktinath in the Annapurna region of Nepal.</p>
             <ul class="package-highlights">
-              <li>Somnath & Dwarka (Gujarat)</li>
-              <li>Mahakaleshwar & Omkareshwar</li>
-              <li>Rameswaram & Mallikarjuna</li>
-              <li>Special abhishekams & pujas</li>
-              <li>Segmented travel choices</li>
-            </ul>
-            <div class="package-pricing">
-              <span class="package-price">Contact for Custom Quote</span>
-              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shakti Peethas Yatra -->
-        <div class="package-card reveal">
-          <div class="package-image">
-            <img src="public/images/dest-south-temple.png" alt="Shakti Peethas Yatra" loading="lazy">
-          </div>
-          <div class="package-content">
-            <span class="package-tag">🛕 Devi Circuit</span>
-            <h3>Shakti Peethas Yatra</h3>
-            <p>Visit the powerful temples of the Divine Mother (Adishakti) in South and Central regions (Kanakadurga, Srisailam, etc.).</p>
-            <ul class="package-highlights">
-              <li>Srisailam Bhramaramba Temple</li>
-              <li>Alampur Jogulamba Peetham</li>
-              <li>Vijayawada Kanakadurga</li>
-              <li>Special Devi Pujas & Kumkumarchana</li>
-              <li>Accompanied by spiritual guide</li>
+              <li>Pashupatinath Temple darshan</li>
+              <li>Muktinath 108 waterspouts</li>
+              <li>Boudhanath Stupa visit</li>
+              <li>Visa & flight assistance</li>
+              <li>Custom rituals & poojas add-on</li>
             </ul>
             <div class="package-pricing">
               <span class="package-price">Contact for Custom Quote</span>
@@ -268,13 +238,13 @@
           <div class="package-content">
             <span class="package-tag">🌅 South India</span>
             <h3>Tirupati Balaji Darshan</h3>
-            <p>Seek divine blessings at the world's richest temple — Sri Venkateswara Temple atop the seven hills of Tirumala.</p>
+            <p>Seek divine blessings at the world's richest temple — Sri Venkateswara Temple atop Tirumala hills.</p>
             <ul class="package-highlights">
               <li>VIP / Special Darshan tickets</li>
-              <li>Accommodation near temple</li>
-              <li>Round-trip transportation</li>
-              <li>Prasadam arrangements</li>
               <li>Srikalahasti temple add-on</li>
+              <li>Accommodation near temple</li>
+              <li>Prasadam arrangements</li>
+              <li>Custom rituals & poojas add-on</li>
             </ul>
             <div class="package-pricing">
               <span class="package-price">Contact for Custom Quote</span>
@@ -283,21 +253,44 @@
           </div>
         </div>
 
-        <!-- South India -->
+        <!-- South India Temples -->
         <div class="package-card reveal">
           <div class="package-image">
             <img src="public/images/dest-south-temple.png" alt="South India Temple Tour" loading="lazy">
           </div>
           <div class="package-content">
-            <span class="package-tag">🏛️ Heritage</span>
+            <span class="package-tag">🏛️ South India</span>
             <h3>South India Temple Tour</h3>
-            <p>Grand Dravidian temple circuit — Meenakshi, Rameswaram, Kanyakumari, Srirangam, and more magnificent temples.</p>
+            <p>Madurai Meenakshi, Rameswaram, Thiruvananthapuram Padmanabhaswamy, Arunachalam & Ahobilam circuit.</p>
             <ul class="package-highlights">
               <li>Meenakshi Amman Temple</li>
               <li>Rameswaram Jyotirlinga</li>
-              <li>Kanyakumari sunrise</li>
-              <li>Srirangam & Thanjavur</li>
-              <li>South Indian cuisine included</li>
+              <li>Arunachaleswarar Temple</li>
+              <li>Ahobilam Narasimha Swamy</li>
+              <li>Custom rituals & poojas add-on</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Somnath & Dwaraka -->
+        <div class="package-card reveal">
+          <div class="package-image">
+            <img src="public/images/dest-jyotirlinga.png" alt="Somnath & Dwaraka" loading="lazy">
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🔱 West India</span>
+            <h3>Somnath, Dwaraka, Nashik & Ujjain</h3>
+            <p>Gujarat & Madhya Pradesh pilgrimage — Somnath Jyotirlinga, Dwarkadhish, Trimbakeshwar & Mahakaleshwar.</p>
+            <ul class="package-highlights">
+              <li>Somnath Jyotirlinga darshan</li>
+              <li>Dwarkadhish Temple</li>
+              <li>Nashik Trimbakeshwar</li>
+              <li>Ujjain Mahakaleshwar</li>
+              <li>Custom rituals & poojas add-on</li>
             </ul>
             <div class="package-pricing">
               <span class="package-price">Contact for Custom Quote</span>
@@ -314,7 +307,7 @@
           <div class="package-content">
             <span class="package-tag">🏔️ Adventure</span>
             <h3>Himalayan Treks & Adventures</h3>
-            <p>Thrilling Himalayan treks — Kedarkantha, Valley of Flowers, Roopkund, Chandrashila, and more epic trails.</p>
+            <p>Thrilling treks — Kedarkantha, Valley of Flowers, Hemkund Sahib, Roopkund & more epic Himalayan trails.</p>
             <ul class="package-highlights">
               <li>Experienced trek guides</li>
               <li>All camping equipment</li>
@@ -353,13 +346,38 @@
     </div>
   </section>
 
+  <!-- Interactive Map Section -->
+  <section class="section" style="background: var(--dark-850);">
+    <div class="container">
+      <div class="map-grid">
+        <div class="map-container reveal-left">
+          <div class="interactiveMap" style="width: 100%; height: 500px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(230,184,79,0.2); z-index: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></div>
+        </div>
+        <div class="map-info reveal-right">
+          <div class="section-badge">🌐 Sacred Footprints</div>
+          <h2>Our Reach Across India & Nepal</h2>
+          <div class="gold-divider"></div>
+          <p>
+            Experience divine tranquility across the subcontinent. From the snowy peaks of Kedarnath in the north to the vibrant shores of Rameswaram in the south, our curated journeys cover every sacred corner.
+          </p>
+          <ul class="feature-list" style="margin-top: 1.5rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-om" style="color: var(--gold-500);"></i> 12 Jyotirlingas carefully mapped out</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-mountain-sun" style="color: var(--gold-500);"></i> Complete Char Dham and regional Dhams</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-gopuram" style="color: var(--gold-500);"></i> Grand temple tours of South India</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-location-dot" style="color: var(--gold-500);"></i> End-to-end guidance from our Hyderabad base</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="public/images/logo.png" alt="Yatrakaar Logo">
-          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India. Fully customized yatras with expert on-ground support.</p>
+          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India & Nepal. Fully customized yatras with expert on-ground support.</p>
           <div class="footer-social">
             <a href="https://instagram.com/yatrakaar" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://facebook.com/yatrakaar" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -383,9 +401,9 @@
           <h4>Popular Yatras</h4>
           <ul>
             <li><a href="services.html">Char Dham Yatra</a></li>
-            <li><a href="services.html">Ayodhya – Kashi – Prayag</a></li>
-            <li><a href="services.html">South India Temples</a></li>
-            <li><a href="services.html">Himalayan Treks</a></li>
+            <li><a href="services.html">Ayodhya – Kashi – Prayagraj</a></li>
+            <li><a href="services.html">Puri Jagannath</a></li>
+            <li><a href="services.html">Nepal – Pashupatinath</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -414,5 +432,8 @@
   <a href="https://wa.me/917569435006" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
   <script src="js/main.js" type="module"></script>
+  <script src="js/yatra-builder.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

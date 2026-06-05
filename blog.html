@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages/about.css">
   <link rel="stylesheet" href="css/pages/blog-contact.css">
-  <link rel="stylesheet" href="css/pages/destinations.css"> <!-- Reusing tabs styles -->
+  <link rel="stylesheet" href="css/pages/destinations.css">
+  <link rel="stylesheet" href="css/pages/yatra-builder.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -40,9 +41,20 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="page-hero">
-    <div class="page-hero-bg"></div>
+  <!-- Hero Section with Collage -->
+  <section class="page-hero collage-hero">
+    <div class="page-hero-bg">
+      <div class="collage-images">
+        <img src="public/images/hero-chardham.png" alt="Char Dham" loading="lazy">
+        <img src="public/images/dest-ayodhya.png" alt="Ayodhya" loading="lazy">
+        <img src="public/images/dest-kashi.png" alt="Kashi" loading="lazy">
+        <img src="public/images/dest-tirupati.png" alt="Tirupati" loading="lazy">
+        <img src="public/images/dest-south-temple.png" alt="South Temple" loading="lazy">
+        <img src="public/images/dest-jyotirlinga.png" alt="Jyotirlinga" loading="lazy">
+        <img src="public/images/dest-adventure.png" alt="Adventure" loading="lazy">
+        <img src="public/images/dest-shirdi.png" alt="Shirdi" loading="lazy">
+      </div>
+    </div>
     <div class="page-hero-content">
       <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Blog</span></div>
       <h1 class="page-hero-title">Yatra Journal</h1>
@@ -232,6 +244,7 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
   <script src="js/main.js" type="module"></script>
+  <script src="js/yatra-builder.js"></script>
   <script>
     // --- Blog Filtering Script ---
     const filterButtons = document.querySelectorAll('.dest-tab-btn');

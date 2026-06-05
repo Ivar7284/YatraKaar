@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages/about.css">
   <link rel="stylesheet" href="css/pages/team.css">
+  <link rel="stylesheet" href="css/pages/yatra-builder.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="css/components/map.css">
 </head>
 <body>
   <div class="preloader" id="preloader">
@@ -44,9 +47,18 @@
     </div>
   </nav>
 
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="page-hero-bg"></div>
+  <!-- Page Hero with Collage -->
+  <section class="page-hero collage-hero team-hero">
+    <div class="page-hero-bg">
+      <div class="collage-images">
+        <img src="sai.jpeg" alt="Team" loading="lazy">
+        <img src="venu.jpeg" alt="Team" loading="lazy">
+        <img src="ravi.jpeg" alt="Team" loading="lazy">
+      </div>
+      <div class="logo-watermark">
+        <img src="public/images/logo.png" alt="Yatrakaar">
+      </div>
+    </div>
     <div class="page-hero-content">
       <div class="page-breadcrumb">
         <a href="index.html">Home</a> <span>/</span> <span>Our Team</span>
@@ -93,16 +105,16 @@
               <div class="skills-container">
                 <span class="skills-title">Expertise</span>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>Hospitality Management</span><span>95%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 95%;"></div></div>
+                  <div class="skill-bar-label"><span>Hospitality Management</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>On-Ground Operations</span><span>90%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 90%;"></div></div>
+                  <div class="skill-bar-label"><span>On-Ground Operations</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>Logistics Coordination</span><span>85%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 85%;"></div></div>
+                  <div class="skill-bar-label"><span>Logistics Coordination</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
               </div>
               <div class="team-social">
@@ -141,16 +153,16 @@
               <div class="skills-container">
                 <span class="skills-title">Expertise</span>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>Yatra Coordination</span><span>95%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 95%;"></div></div>
+                  <div class="skill-bar-label"><span>Yatra Coordination</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>Problem Solving</span><span>90%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 90%;"></div></div>
+                  <div class="skill-bar-label"><span>Problem Solving</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>Communication & Support</span><span>95%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 95%;"></div></div>
+                  <div class="skill-bar-label"><span>Communication & Support</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
               </div>
               <div class="team-social">
@@ -189,16 +201,16 @@
               <div class="skills-container">
                 <span class="skills-title">Expertise</span>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>Administration</span><span>95%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 95%;"></div></div>
+                  <div class="skill-bar-label"><span>Administration</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>Bookings & Registrations</span><span>90%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 90%;"></div></div>
+                  <div class="skill-bar-label"><span>Bookings & Registrations</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
                 <div class="skill-bar-item">
-                  <div class="skill-bar-label"><span>Enquiry Management</span><span>95%</span></div>
-                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 95%;"></div></div>
+                  <div class="skill-bar-label"><span>Enquiry Management</span><span>100%</span></div>
+                  <div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-percent: 100%;"></div></div>
                 </div>
               </div>
               <div class="team-social">
@@ -227,13 +239,38 @@
     </div>
   </section>
 
+  <!-- Interactive Map Section -->
+  <section class="section" style="background: var(--dark-850);">
+    <div class="container">
+      <div class="map-grid">
+        <div class="map-container reveal-left">
+          <div class="interactiveMap" style="width: 100%; height: 500px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(230,184,79,0.2); z-index: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></div>
+        </div>
+        <div class="map-info reveal-right">
+          <div class="section-badge">🌐 Sacred Footprints</div>
+          <h2>Our Reach Across India & Nepal</h2>
+          <div class="gold-divider"></div>
+          <p>
+            Experience divine tranquility across the subcontinent. From the snowy peaks of Kedarnath in the north to the vibrant shores of Rameswaram in the south, our curated journeys cover every sacred corner.
+          </p>
+          <ul class="feature-list" style="margin-top: 1.5rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-om" style="color: var(--gold-500);"></i> 12 Jyotirlingas carefully mapped out</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-mountain-sun" style="color: var(--gold-500);"></i> Complete Char Dham and regional Dhams</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-gopuram" style="color: var(--gold-500);"></i> Grand temple tours of South India</li>
+            <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-location-dot" style="color: var(--gold-500);"></i> End-to-end guidance from our Hyderabad base</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="public/images/logo.png" alt="Yatrakaar Logo">
-          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India. Fully customized yatras with expert on-ground support.</p>
+          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India & Nepal. Fully customized yatras with expert on-ground support.</p>
           <div class="footer-social">
             <a href="https://instagram.com/yatrakaar" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://facebook.com/yatrakaar" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -257,9 +294,9 @@
           <h4>Popular Yatras</h4>
           <ul>
             <li><a href="services.html">Char Dham Yatra</a></li>
-            <li><a href="services.html">Ayodhya – Kashi – Prayag</a></li>
-            <li><a href="services.html">South India Temples</a></li>
-            <li><a href="services.html">Himalayan Treks</a></li>
+            <li><a href="services.html">Ayodhya – Kashi – Prayagraj</a></li>
+            <li><a href="services.html">Puri Jagannath</a></li>
+            <li><a href="services.html">Nepal – Pashupatinath</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -288,5 +325,8 @@
   <a href="https://wa.me/917569435006" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
   <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
   <script src="js/main.js" type="module"></script>
+  <script src="js/yatra-builder.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

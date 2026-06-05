@@ -8,7 +8,10 @@
   <link rel="icon" href="public/images/logo.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages/about.css">
+  <link rel="stylesheet" href="css/pages/yatra-builder.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="css/components/map.css">
 </head>
 <body>
   <div class="preloader" id="preloader">
@@ -43,9 +46,23 @@
     </div>
   </nav>
 
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="page-hero-bg"></div>
+  <!-- Page Hero with Collage -->
+  <section class="page-hero collage-hero">
+    <div class="page-hero-bg">
+      <div class="collage-images">
+        <img src="public/images/hero-chardham.png" alt="Char Dham" loading="lazy">
+        <img src="public/images/dest-ayodhya.png" alt="Ayodhya" loading="lazy">
+        <img src="public/images/dest-kashi.png" alt="Kashi" loading="lazy">
+        <img src="public/images/dest-tirupati.png" alt="Tirupati" loading="lazy">
+        <img src="public/images/dest-south-temple.png" alt="South Temple" loading="lazy">
+        <img src="public/images/dest-jyotirlinga.png" alt="Jyotirlinga" loading="lazy">
+        <img src="public/images/dest-adventure.png" alt="Adventure" loading="lazy">
+        <img src="public/images/dest-shirdi.png" alt="Shirdi" loading="lazy">
+      </div>
+      <div class="logo-watermark">
+        <img src="public/images/logo.png" alt="Yatrakaar">
+      </div>
+    </div>
     <div class="page-hero-content">
       <div class="page-breadcrumb">
         <a href="index.html">Home</a> <span>/</span> <span>About Us</span>
@@ -56,7 +73,10 @@
   </section>
 
   <!-- Story Section -->
-  <section class="section">
+  <section class="section" style="position: relative;">
+    <div class="logo-watermark" style="width: 300px; height: 300px; opacity: 0.025;">
+      <img src="public/images/logo.png" alt="">
+    </div>
     <div class="container">
       <div class="story-grid">
         <div class="story-content reveal-left">
@@ -70,7 +90,7 @@
             Our founders, with <strong>combined 20+ years of experience</strong> in hospitality, yatra coordination, and on-ground management, came together to create something different — a service where <strong>every pilgrimage is as unique as the devotee</strong> undertaking it.
           </p>
           <p>
-            Based in <strong>Hyderabad</strong>, we specialize in organizing yatras across India — from the snow-clad Char Dham in the Himalayas to the ancient temples of South India, from the sacred Ayodhya-Kashi-Prayag circuit to Shirdi, Pandharpur, and thrilling Himalayan treks. Every journey is fully customized to your preferences, comfort, and schedule.
+            Based in <strong>Hyderabad</strong>, we specialize in organizing yatras across India & Nepal — from the snow-clad Char Dham in the Himalayas to the ancient temples of South India, from Ayodhya-Kashi-Prayagraj to Nepal's Pashupatinath & Muktinath, and thrilling Himalayan treks. Every journey is fully customized to your preferences, comfort, and schedule.
           </p>
           <a href="team.html" class="btn btn-outline" style="margin-top: 1rem;">Meet Our Team <i class="fas fa-arrow-right"></i></a>
         </div>
@@ -126,74 +146,19 @@
     </div>
   </section>
 
-  <!-- India Destination Map Section -->
+  <!-- India Destination Map Section (FIXED) -->
   <section class="section">
     <div class="container">
       <div class="map-grid">
         <div class="map-container reveal-left">
-          <svg class="india-svg" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Soft outline map of India -->
-            <path d="M190 30 L200 40 L210 50 L205 60 L215 70 L210 90 L220 100 L230 110 L240 120 L230 135 L245 140 L260 130 L280 145 L290 140 L310 150 L320 180 L350 200 L340 220 L320 230 L300 240 L280 230 L270 240 L260 235 L250 245 L230 250 L220 270 L210 280 L205 300 L200 320 L195 350 L190 380 L180 400 L175 420 L168 440 L162 455 L168 460 L158 450 L150 420 L140 380 L130 350 L120 320 L110 300 L95 285 L80 270 L70 260 L60 250 L50 230 L40 225 L30 215 L45 200 L55 190 L60 170 L70 165 L85 168 L95 160 L105 165 L115 155 L125 150 L135 152 L140 142 L138 130 L148 120 L158 110 L152 95 L160 80 L170 70 L180 50 L185 40 Z" fill="rgba(230, 184, 79, 0.03)" stroke="rgba(230, 184, 79, 0.15)" stroke-width="1.5" />
-            
-            <!-- Route Lines from Hyderabad (Approx x=165, y=320) -->
-            <path d="M165 320 Q170 190 190 70" stroke="var(--gold-500)" stroke-dasharray="5,5" stroke-width="1" opacity="0.4" />
-            <path d="M165 320 Q190 230 215 140" stroke="var(--gold-500)" stroke-dasharray="5,5" stroke-width="1" opacity="0.4" />
-            <path d="M165 320 Q200 235 230 150" stroke="var(--gold-500)" stroke-dasharray="5,5" stroke-width="1" opacity="0.4" />
-            <path d="M165 320 Q140 300 115 275" stroke="var(--gold-500)" stroke-dasharray="5,5" stroke-width="1" opacity="0.4" />
-            <path d="M165 320 Q162 355 160 390" stroke="var(--gold-500)" stroke-dasharray="5,5" stroke-width="1" opacity="0.4" />
-            <path d="M165 320 Q163 385 162 450" stroke="var(--gold-500)" stroke-dasharray="5,5" stroke-width="1" opacity="0.4" />
-            
-            <!-- Glowing Points -->
-            <!-- Base: Hyderabad -->
-            <g class="map-point" transform="translate(165,320)">
-              <circle r="12" class="map-pin-glow" />
-              <circle r="4" class="map-pin" fill="var(--saffron)" />
-              <text x="8" y="4" class="map-label">HYDERABAD (Base)</text>
-            </g>
-            <!-- Kedarnath (Char Dham) -->
-            <g class="map-point" transform="translate(190,70)">
-              <circle r="10" class="map-pin-glow" />
-              <circle r="3.5" class="map-pin" />
-              <text x="8" y="4" class="map-label">Char Dham</text>
-            </g>
-            <!-- Ayodhya -->
-            <g class="map-point" transform="translate(215,140)">
-              <circle r="10" class="map-pin-glow" />
-              <circle r="3.5" class="map-pin" />
-              <text x="8" y="4" class="map-label">Ayodhya</text>
-            </g>
-            <!-- Kashi -->
-            <g class="map-point" transform="translate(230,150)">
-              <circle r="10" class="map-pin-glow" />
-              <circle r="3.5" class="map-pin" />
-              <text x="8" y="4" class="map-label">Kashi</text>
-            </g>
-            <!-- Shirdi -->
-            <g class="map-point" transform="translate(115,275)">
-              <circle r="10" class="map-pin-glow" />
-              <circle r="3.5" class="map-pin" />
-              <text x="8" y="4" class="map-label">Shirdi</text>
-            </g>
-            <!-- Tirupati -->
-            <g class="map-point" transform="translate(160,390)">
-              <circle r="10" class="map-pin-glow" />
-              <circle r="3.5" class="map-pin" />
-              <text x="8" y="4" class="map-label">Tirupati</text>
-            </g>
-            <!-- Rameswaram -->
-            <g class="map-point" transform="translate(162,450)">
-              <circle r="10" class="map-pin-glow" />
-              <circle r="3.5" class="map-pin" />
-              <text x="-80" y="4" class="map-label">Rameswaram</text>
-            </g>
-          </svg>
+          <div class="interactiveMap" style="width: 100%; height: 500px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(230,184,79,0.2); z-index: 1; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"></div>
         </div>
         <div class="map-info reveal-right">
           <div class="section-badge">🌐 Sacred Footprints</div>
-          <h2>Our Reach Across India</h2>
+          <h2>Our Reach Across India & Nepal</h2>
           <div class="gold-divider"></div>
           <p>
-            With roots deeply established in Hyderabad, our custom itineraries span all directions of the subcontinent. Whether you seek the high-altitude spiritual peaks of the Himalayas, the tranquil jyotirlingas of Central India, or the structural grandiosity of the temple towers of Tamil Nadu, we provide flawless A-Z support.
+            With roots deeply established in Hyderabad, our custom itineraries span all directions of the subcontinent and even into Nepal. Whether you seek the high-altitude spiritual peaks of Char Dham, the tranquil jyotirlingas of Western India, Puri Jagannath, or the Pashupatinath & Muktinath of Nepal, we provide flawless A-Z support.
           </p>
           <p>
             Hover or tap on the map markers to view our key circuits. Our on-ground coordinators travel with you to ensure VIP darshans, quality local transport, and safe accommodation, making physical distance feel effortless.
@@ -275,7 +240,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="public/images/logo.png" alt="Yatrakaar Logo">
-          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India. Fully customized yatras with expert on-ground support.</p>
+          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India & Nepal. Fully customized yatras with expert on-ground support.</p>
           <div class="footer-social">
             <a href="https://instagram.com/yatrakaar" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://facebook.com/yatrakaar" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -299,9 +264,9 @@
           <h4>Popular Yatras</h4>
           <ul>
             <li><a href="services.html">Char Dham Yatra</a></li>
-            <li><a href="services.html">Ayodhya – Kashi – Prayag</a></li>
-            <li><a href="services.html">South India Temples</a></li>
-            <li><a href="services.html">Himalayan Treks</a></li>
+            <li><a href="services.html">Ayodhya – Kashi – Prayagraj</a></li>
+            <li><a href="services.html">Puri Jagannath</a></li>
+            <li><a href="services.html">Nepal – Pashupatinath</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -330,5 +295,8 @@
   <a href="https://wa.me/917569435006" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
   <script src="js/main.js" type="module"></script>
+  <script src="js/yatra-builder.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/map.js"></script>
 </body>
 </html>
