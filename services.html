@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages & Services — Yatrakaar | Custom Yatra Plans</title>
+  <meta name="description" content="Explore Yatrakaar's fully customizable yatra packages — Char Dham, Ayodhya-Kashi-Prayag, South India temples, Himalayan treks, and more.">
+  <link rel="icon" href="public/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+  <link rel="stylesheet" href="css/pages/services.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader-content"><div class="preloader-om"><img src="public/images/logo.png" alt="Yatrakaar Logo"></div><div class="preloader-bar"><div class="preloader-bar-fill"></div></div></div></div>
+  <div class="particles-container" id="particles"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="public/images/logo.png" alt="Yatrakaar Logo">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Yatrakaar</span>
+          <span class="nav-brand-tag">Spiritual Tours & Travels</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Packages</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Book Yatra</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Packages</span></div>
+      <h1 class="page-hero-title">Yatra Packages</h1>
+      <p class="page-hero-subtitle">Choose a starting point or go fully custom — your yatra, your way</p>
+    </div>
+  </section>
+
+  <!-- Custom Builder CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="custom-builder reveal">
+        <div class="custom-builder-icon">✨</div>
+        <h2>Build Your <span class="text-gold">Custom Yatra</span></h2>
+        <p>Don't see what you're looking for? Tell us your dream yatra — choose your destinations, dates, duration, group size, budget, and preferences. We'll plan everything from scratch, just for you.</p>
+        <div class="custom-features stagger-children">
+          <div class="custom-feature reveal">
+            <div class="custom-feature-icon">📍</div>
+            <h4>Choose Destinations</h4>
+            <p>Pick any temples, cities, or circuits across India</p>
+          </div>
+          <div class="custom-feature reveal">
+            <div class="custom-feature-icon">📅</div>
+            <h4>Pick Your Dates</h4>
+            <p>Travel when it suits you — any day, any season</p>
+          </div>
+          <div class="custom-feature reveal">
+            <div class="custom-feature-icon">⏱️</div>
+            <h4>Set Duration</h4>
+            <p>3 days or 30 days — we plan for any length</p>
+          </div>
+          <div class="custom-feature reveal">
+            <div class="custom-feature-icon">💰</div>
+            <h4>Your Budget</h4>
+            <p>Budget to luxury — we work within your range</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-lg" style="position: relative;">Design My Custom Yatra <i class="fas fa-arrow-right"></i></a>
+
+        <!-- Custom Yatra Process Flow -->
+        <div class="process-flow reveal">
+          <div class="gold-divider gold-divider-center" style="margin-bottom: var(--space-xl);"></div>
+          <h3 class="mb-2xl" style="font-family: var(--font-heading); color: var(--gold-400); text-transform: uppercase; letter-spacing: 2px; font-size: var(--text-base);">How It Works</h3>
+          <div class="process-grid stagger-children">
+            <div class="process-step">
+              <div class="process-circle">1</div>
+              <h4>Share Details</h4>
+              <p>Fill our simple contact form or drop a WhatsApp with your preferences.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-circle">2</div>
+              <h4>Get Free Draft</h4>
+              <p>Receive a customized day-by-day itinerary and pricing model.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-circle">3</div>
+              <h4>Finalize Options</h4>
+              <p>Tweak dates, transport mode, hotels, and add VIP darshans.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-circle">4</div>
+              <h4>Sacred Journey</h4>
+              <p>Embark on your trip with complete end-to-end coordination.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Packages -->
+  <section class="section" style="background: var(--dark-800);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">📦 Popular Packages</div>
+        <h2 class="section-title">Curated Yatra Circuits</h2>
+        <p class="section-subtitle">Popular starting points — each fully customizable to your preferences</p>
+      </div>
+      <div class="packages-grid stagger-children">
+        <!-- Char Dham -->
+        <div class="package-card featured reveal">
+          <div class="package-image">
+            <img src="public/images/hero-chardham.png" alt="Char Dham Yatra" loading="lazy">
+            <span class="package-featured-badge">Most Popular</span>
+          </div>
+          <div class="package-content">
+            <span class="package-tag">⭐ North India</span>
+            <h3>Char Dham Yatra</h3>
+            <p>The ultimate Himalayan pilgrimage covering all four sacred abodes — Badrinath, Kedarnath, Gangotri & Yamunotri.</p>
+            <ul class="package-highlights">
+              <li>All four Dham temples covered</li>
+              <li>Comfortable hill station stays</li>
+              <li>Experienced mountain drivers</li>
+              <li>VIP darshan arrangements</li>
+              <li>Helicopter options available</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ayodhya Kashi Prayag -->
+        <div class="package-card reveal">
+          <div class="package-image">
+            <img src="public/images/dest-ayodhya.png" alt="Ayodhya Kashi Prayag" loading="lazy">
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🛕 Sacred Circuit</span>
+            <h3>Ayodhya – Kashi – Prayag</h3>
+            <p>Experience the holy trinity — Ram Mandir in Ayodhya, Kashi Vishwanath in Varanasi, and Triveni Sangam in Prayagraj.</p>
+            <ul class="package-highlights">
+              <li>Ram Mandir VIP darshan</li>
+              <li>Kashi Vishwanath special puja</li>
+              <li>Ganga Aarti experience</li>
+              <li>Triveni Sangam holy dip</li>
+              <li>Comfortable AC transport</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kashi & Naimisharanya -->
+        <div class="package-card reveal">
+          <div class="package-image">
+            <img src="public/images/dest-kashi.png" alt="Naimisharanya Circuit" loading="lazy">
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🔱 Spiritual</span>
+            <h3>Kashi & Naimisharanya Circuit</h3>
+            <p>Visit the ancient forest where the Puranas were narrated, combined with the eternal spiritual city of Varanasi.</p>
+            <ul class="package-highlights">
+              <li>Naimisharanya Chakra Tirth</li>
+              <li>88,000 Rishis tapasthali</li>
+              <li>Kashi temples & ghats</li>
+              <li>Sarnath Buddhist site</li>
+              <li>Expert local guides</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shirdi & Pandharpur -->
+        <div class="package-card featured reveal">
+          <div class="package-image">
+            <img src="public/images/dest-shirdi.png" alt="Shirdi & Pandharpur Yatra" loading="lazy">
+            <span class="package-featured-badge">Devotion Circuit</span>
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🕉️ Maharashtra</span>
+            <h3>Shirdi & Pandharpur Yatra</h3>
+            <p>Seek blessings at Sai Baba's Samadhi Temple in Shirdi and the legendary Vitthal Rukmini Temple in Pandharpur.</p>
+            <ul class="package-highlights">
+              <li>Shirdi Sai Baba Kakad Aarti</li>
+              <li>Pandharpur Vitthal Temple darshan</li>
+              <li>Shani Shingnapur temple visit</li>
+              <li>Comfortable hotel stays</li>
+              <li>AC transport from Pune/Mumbai</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 Jyotirlinga Circuit -->
+        <div class="package-card reveal">
+          <div class="package-image">
+            <img src="public/images/dest-jyotirlinga.png" alt="12 Jyotirlingas" loading="lazy">
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🔱 Lord Shiva</span>
+            <h3>12 Jyotirlingas Circuit</h3>
+            <p>Embark on the ultimate Shaivite pilgrimage, visiting all 12 holy shrines of Lord Shiva scattered across India.</p>
+            <ul class="package-highlights">
+              <li>Somnath & Dwarka (Gujarat)</li>
+              <li>Mahakaleshwar & Omkareshwar</li>
+              <li>Rameswaram & Mallikarjuna</li>
+              <li>Special abhishekams & pujas</li>
+              <li>Segmented travel choices</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shakti Peethas Yatra -->
+        <div class="package-card reveal">
+          <div class="package-image">
+            <img src="public/images/dest-south-temple.png" alt="Shakti Peethas Yatra" loading="lazy">
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🛕 Devi Circuit</span>
+            <h3>Shakti Peethas Yatra</h3>
+            <p>Visit the powerful temples of the Divine Mother (Adishakti) in South and Central regions (Kanakadurga, Srisailam, etc.).</p>
+            <ul class="package-highlights">
+              <li>Srisailam Bhramaramba Temple</li>
+              <li>Alampur Jogulamba Peetham</li>
+              <li>Vijayawada Kanakadurga</li>
+              <li>Special Devi Pujas & Kumkumarchana</li>
+              <li>Accompanied by spiritual guide</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tirupati -->
+        <div class="package-card reveal">
+          <div class="package-image">
+            <img src="public/images/dest-tirupati.png" alt="Tirupati Balaji" loading="lazy">
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🌅 South India</span>
+            <h3>Tirupati Balaji Darshan</h3>
+            <p>Seek divine blessings at the world's richest temple — Sri Venkateswara Temple atop the seven hills of Tirumala.</p>
+            <ul class="package-highlights">
+              <li>VIP / Special Darshan tickets</li>
+              <li>Accommodation near temple</li>
+              <li>Round-trip transportation</li>
+              <li>Prasadam arrangements</li>
+              <li>Srikalahasti temple add-on</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- South India -->
+        <div class="package-card reveal">
+          <div class="package-image">
+            <img src="public/images/dest-south-temple.png" alt="South India Temple Tour" loading="lazy">
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🏛️ Heritage</span>
+            <h3>South India Temple Tour</h3>
+            <p>Grand Dravidian temple circuit — Meenakshi, Rameswaram, Kanyakumari, Srirangam, and more magnificent temples.</p>
+            <ul class="package-highlights">
+              <li>Meenakshi Amman Temple</li>
+              <li>Rameswaram Jyotirlinga</li>
+              <li>Kanyakumari sunrise</li>
+              <li>Srirangam & Thanjavur</li>
+              <li>South Indian cuisine included</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adventure -->
+        <div class="package-card reveal">
+          <div class="package-image">
+            <img src="public/images/dest-adventure.png" alt="Himalayan Adventures" loading="lazy">
+          </div>
+          <div class="package-content">
+            <span class="package-tag">🏔️ Adventure</span>
+            <h3>Himalayan Treks & Adventures</h3>
+            <p>Thrilling Himalayan treks — Kedarkantha, Valley of Flowers, Roopkund, Chandrashila, and more epic trails.</p>
+            <ul class="package-highlights">
+              <li>Experienced trek guides</li>
+              <li>All camping equipment</li>
+              <li>Safety & medical support</li>
+              <li>Meals during trek</li>
+              <li>Customizable difficulty levels</li>
+            </ul>
+            <div class="package-pricing">
+              <span class="package-price">Contact for Custom Quote</span>
+              <a href="contact.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: var(--text-xs);">Enquire <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- On-Spot Services -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">⚡ On-the-Spot Services</div>
+        <h2 class="section-title">Need Something Right Now?</h2>
+        <p class="section-subtitle">Already on your trip? We provide instant on-the-spot services wherever you are</p>
+      </div>
+      <div class="spot-services-grid stagger-children">
+        <div class="spot-card reveal"><div class="spot-icon">🚗</div><h4>Transportation</h4><p>Instant cab & vehicle bookings for any route or destination</p></div>
+        <div class="spot-card reveal"><div class="spot-icon">🏨</div><h4>Accommodation</h4><p>Last-minute hotel & dharamshala bookings near temples</p></div>
+        <div class="spot-card reveal"><div class="spot-icon">🎫</div><h4>VIP Darshan</h4><p>Priority darshan tickets & special puja arrangements</p></div>
+        <div class="spot-card reveal"><div class="spot-icon">🍽️</div><h4>Meals</h4><p>Sattvic meals, tiffin services & restaurant bookings</p></div>
+        <div class="spot-card reveal"><div class="spot-icon">🧭</div><h4>Local Guides</h4><p>Experienced local guides for temple tours & city walks</p></div>
+        <div class="spot-card reveal"><div class="spot-icon">🚁</div><h4>Helicopter</h4><p>Heli bookings for Kedarnath & other sacred destinations</p></div>
+        <div class="spot-card reveal"><div class="spot-icon">📋</div><h4>Registrations</h4><p>Online & offline registration assistance for yatras</p></div>
+        <div class="spot-card reveal"><div class="spot-icon">🆘</div><h4>Emergency Help</h4><p>24/7 emergency support & assistance on ground</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="public/images/logo.png" alt="Yatrakaar Logo">
+          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India. Fully customized yatras with expert on-ground support.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/yatrakaar" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/yatrakaar" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com/@yatrakaar" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/917569435006" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Packages</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Yatras</h4>
+          <ul>
+            <li><a href="services.html">Char Dham Yatra</a></li>
+            <li><a href="services.html">Ayodhya – Kashi – Prayag</a></li>
+            <li><a href="services.html">South India Temples</a></li>
+            <li><a href="services.html">Himalayan Treks</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+917569435006">+91 7569435006</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="footer-contact-text"><strong>Email</strong><a href="mailto:yatrakaar@gmail.com">yatrakaar@gmail.com</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="footer-contact-text"><strong>Location</strong>Hyderabad, Telangana, India</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yatrakaar. All rights reserved. | Crafted with 🕉️ devotion</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/917569435006" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>

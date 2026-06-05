@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Yatrakaar | Spiritual Travel Insights & Guides</title>
+  <meta name="description" content="Read spiritual travel guides, yatra tips, temple history, and trekking insights from the Yatrakaar team.">
+  <link rel="icon" href="public/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+  <link rel="stylesheet" href="css/pages/blog-contact.css">
+  <link rel="stylesheet" href="css/pages/destinations.css"> <!-- Reusing tabs styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader-content"><div class="preloader-om"><img src="public/images/logo.png" alt="Yatrakaar Logo"></div><div class="preloader-bar"><div class="preloader-bar-fill"></div></div></div></div>
+  <div class="particles-container" id="particles"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="public/images/logo.png" alt="Yatrakaar Logo">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Yatrakaar</span>
+          <span class="nav-brand-tag">Spiritual Tours & Travels</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Packages</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Book Yatra</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Blog</span></div>
+      <h1 class="page-hero-title">Yatra Journal</h1>
+      <p class="page-hero-subtitle">Stories, guides, and insights from the sacred road</p>
+    </div>
+  </section>
+
+  <!-- Blog Filters & Grid Section -->
+  <section class="section">
+    <div class="container">
+      <!-- Category Tabs -->
+      <div class="dest-tabs-container reveal">
+        <div class="dest-tabs">
+          <button class="dest-tab-btn active" data-category="all">All Stories</button>
+          <button class="dest-tab-btn" data-category="guide">Yatra Guides</button>
+          <button class="dest-tab-btn" data-category="history">Temple History</button>
+          <button class="dest-tab-btn" data-category="tips">Travel Tips</button>
+          <button class="dest-tab-btn" data-category="adventure">Adventure</button>
+        </div>
+      </div>
+
+      <div class="blog-grid stagger-children">
+        <!-- Blog 1 - Featured -->
+        <article class="blog-card featured reveal" data-type="guide">
+          <div class="blog-image">
+            <img src="public/images/hero-chardham.png" alt="Char Dham Guide" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Yatra Guide</span>
+              <span>May 2025</span>
+              <span><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+            <h3>The Complete Guide to Char Dham Yatra 2025</h3>
+            <p>Everything you need to know about planning the ultimate Char Dham Yatra — best time to visit, registration process, what to pack, route options, and insider tips from our experienced team.</p>
+            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Blog 2 -->
+        <article class="blog-card reveal" data-type="history">
+          <div class="blog-image">
+            <img src="public/images/dest-ayodhya.png" alt="Ayodhya Ram Mandir" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Temple History</span>
+              <span>Apr 2025</span>
+              <span><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+            <h3>Ayodhya Ram Mandir: A Pilgrim's Guide</h3>
+            <p>Discover the spiritual significance of the newly inaugurated Ram Mandir, darshan timings, VIP access options, nearby temples, and the best way to plan your Ayodhya visit.</p>
+            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Blog 3 -->
+        <article class="blog-card reveal" data-type="guide">
+          <div class="blog-image">
+            <img src="public/images/dest-kashi.png" alt="Kashi Spiritual Guide" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Yatra Guide</span>
+              <span>Mar 2025</span>
+              <span><i class="far fa-clock"></i> 10 min read</span>
+            </div>
+            <h3>Kashi: The Eternal City of Light & Liberation</h3>
+            <p>A deep dive into the spiritual significance of Varanasi — the sacred ghats, the mesmerizing Ganga Aarti, Kashi Vishwanath, and why every Hindu should visit at least once.</p>
+            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Blog 4 -->
+        <article class="blog-card reveal" data-type="guide">
+          <div class="blog-image">
+            <img src="public/images/dest-tirupati.png" alt="South India Temples" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Yatra Guide</span>
+              <span>Feb 2025</span>
+              <span><i class="far fa-clock"></i> 7 min read</span>
+            </div>
+            <h3>Top 10 South Indian Temples You Must Visit</h3>
+            <p>From Tirupati Balaji to Rameswaram, from Meenakshi to Padmanabhaswamy — explore the grandest temples of South India and plan your Dravidian temple circuit.</p>
+            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Blog 5 -->
+        <article class="blog-card reveal" data-type="adventure">
+          <div class="blog-image">
+            <img src="public/images/dest-adventure.png" alt="Himalayan Treks" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Adventure</span>
+              <span>Jan 2025</span>
+              <span><i class="far fa-clock"></i> 9 min read</span>
+            </div>
+            <h3>5 Beginner-Friendly Himalayan Treks</h3>
+            <p>New to trekking? These five stunning Himalayan trails offer breathtaking views without extreme difficulty — perfect for first-timers wanting a taste of mountain adventure.</p>
+            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Blog 6 -->
+        <article class="blog-card reveal" data-type="tips">
+          <div class="blog-image">
+            <img src="public/images/dest-south-temple.png" alt="Packing Guide" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-category">Travel Tips</span>
+              <span>Dec 2024</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h3>What to Pack for a Spiritual Yatra</h3>
+            <p>The ultimate packing checklist for your pilgrimage — from essentials like comfortable walking shoes to often-forgotten items that can make or break your journey.</p>
+            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="public/images/logo.png" alt="Yatrakaar Logo">
+          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India. Fully customized yatras with expert on-ground support.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/yatrakaar" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/yatrakaar" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com/@yatrakaar" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/917569435006" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Packages</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Yatras</h4>
+          <ul>
+            <li><a href="services.html">Char Dham Yatra</a></li>
+            <li><a href="services.html">Ayodhya – Kashi – Prayag</a></li>
+            <li><a href="services.html">South India Temples</a></li>
+            <li><a href="services.html">Himalayan Treks</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+917569435006">+91 7569435006</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="footer-contact-text"><strong>Email</strong><a href="mailto:yatrakaar@gmail.com">yatrakaar@gmail.com</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="footer-contact-text"><strong>Location</strong>Hyderabad, Telangana, India</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yatrakaar. All rights reserved. | Crafted with 🕉️ devotion</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/917569435006" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="js/main.js" type="module"></script>
+  <script>
+    // --- Blog Filtering Script ---
+    const filterButtons = document.querySelectorAll('.dest-tab-btn');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cat = btn.getAttribute('data-category');
+        blogCards.forEach(card => {
+          const type = card.getAttribute('data-type');
+          if (cat === 'all' || type === cat) {
+            card.style.display = '';
+            // trigger slight fade in
+            card.style.opacity = '0';
+            setTimeout(() => { card.style.opacity = '1'; }, 50);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

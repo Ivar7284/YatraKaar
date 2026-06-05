@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacred Destinations — Yatrakaar | Spiritual Circuits & Adventures</title>
+  <meta name="description" content="Explore Yatrakaar's extensive list of spiritual circuits across India, from Char Dham, Ayodhya, Kashi, to South India Temples, Jyotirlingas, and treks.">
+  <link rel="icon" href="public/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+  <link rel="stylesheet" href="css/pages/destinations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader-content"><div class="preloader-om"><img src="public/images/logo.png" alt="Yatrakaar Logo"></div><div class="preloader-bar"><div class="preloader-bar-fill"></div></div></div></div>
+  <div class="particles-container" id="particles"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="public/images/logo.png" alt="Yatrakaar Logo">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Yatrakaar</span>
+          <span class="nav-brand-tag">Spiritual Tours & Travels</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Packages</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Book Yatra</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background: linear-gradient(180deg, rgba(13,11,26,0.3) 0%, rgba(13,11,26,0.95) 100%), url('public/images/dest-hero.png') center/cover no-repeat;"></div>
+    <div class="page-hero-content">
+      <div class="page-breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Destinations</span></div>
+      <h1 class="page-hero-title">Sacred Destinations</h1>
+      <p class="page-hero-subtitle">Explore India's divine landscapes, historic temples, and adventure circuits</p>
+    </div>
+  </section>
+
+  <!-- Destinations Filter Grid Section -->
+  <section class="section">
+    <div class="container">
+      <!-- Tabs Filter -->
+      <div class="dest-tabs-container reveal">
+        <div class="dest-tabs">
+          <button class="dest-tab-btn active" data-filter="all">All Circuits</button>
+          <button class="dest-tab-btn" data-filter="north">North India</button>
+          <button class="dest-tab-btn" data-filter="central">Central & West</button>
+          <button class="dest-tab-btn" data-filter="south">South India</button>
+          <button class="dest-tab-btn" data-filter="adventures">Treks & Adventures</button>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="dest-grid stagger-children">
+        <!-- Char Dham Yatra -->
+        <div class="dest-grid-card reveal" data-region="north">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">North India</span>
+            <img src="public/images/hero-chardham.png" alt="Char Dham Yatra" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Char Dham Yatra</h3>
+              <p>Pilgrimage to Badrinath (Lord Vishnu), Kedarnath (Lord Shiva), Gangotri (Goddess Ganga), and Yamunotri (Goddess Yamuna) in the serene Himalayas.</p>
+              <ul class="dest-features">
+                <li>VIP Darshan & Pujas</li>
+                <li>AC Vehicles & Stays</li>
+                <li>Helicopter options available</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 10 - 12 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ayodhya - Kashi - Prayag -->
+        <div class="dest-grid-card reveal" data-region="north">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">North India</span>
+            <img src="public/images/dest-ayodhya.png" alt="Ayodhya - Kashi - Prayag Yatra" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Ayodhya – Kashi – Prayag</h3>
+              <p>Seek blessings at Shri Ram Janmabhoomi in Ayodhya, seek liberation at Kashi Vishwanath, and take a holy dip in Prayagraj Sangam.</p>
+              <ul class="dest-features">
+                <li>Ram Mandir VIP slot</li>
+                <li>Varanasi Ganga Aarti boat</li>
+                <li>Triveni Sangam rituals</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 6 - 8 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kashi & Naimisharanya -->
+        <div class="dest-grid-card reveal" data-region="north">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">North India</span>
+            <img src="public/images/dest-kashi.png" alt="Kashi & Naimisharanya" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Kashi & Naimisharanya</h3>
+              <p>Combine Varanasi's sacred ghats with the mystical Naimisharanya forest, where sage Ved Vyas divided the Vedas and Puranas.</p>
+              <ul class="dest-features">
+                <li>Chakra Tirth Holy Bath</li>
+                <li>Vyas Gaddi tapovan visit</li>
+                <li>Sarnath sightseeing</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 5 - 7 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shirdi & Pandharpur -->
+        <div class="dest-grid-card reveal" data-region="central">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">Central & West</span>
+            <img src="public/images/dest-shirdi.png" alt="Shirdi & Pandharpur Yatra" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Shirdi & Pandharpur</h3>
+              <p>Offer prayers at Sai Baba's Samadhi Temple in Shirdi and visit Vitthal-Rukmini's holy shrine on the banks of Chandrabhaga in Pandharpur.</p>
+              <ul class="dest-features">
+                <li>Sai Baba Kakad Aarti</li>
+                <li>Vitthal Temple special pass</li>
+                <li>Shani Shingnapur visit</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 5 - 6 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 Jyotirlingas Circuit -->
+        <div class="dest-grid-card reveal" data-region="central">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">Central & West</span>
+            <img src="public/images/dest-jyotirlinga.png" alt="12 Jyotirlingas Yatra" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>12 Jyotirlingas Circuit</h3>
+              <p>Journey across the length of India to seek blessings at all 12 self-manifested Jyotirlingas of Lord Shiva in absolute comfort.</p>
+              <ul class="dest-features">
+                <li>Segmented options available</li>
+                <li>Somnath, Mahakal & Omkareshwar</li>
+                <li>Special Pujas arranged</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ Custom / Multi-part</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- South India Temple Tour -->
+        <div class="dest-grid-card reveal" data-region="south">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">South India</span>
+            <img src="public/images/dest-south-temple.png" alt="South India Temple Tour" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>South India Temple Tour</h3>
+              <p>Explore Dravidian heritage architecture at Madurai Meenakshi Temple, Rameswaram Jyotirlinga, and the sacred land of Kanyakumari.</p>
+              <ul class="dest-features">
+                <li>Rameswaram 22 holy wells bath</li>
+                <li>Vivekananda Rock Memorial</li>
+                <li>Srirangam Ranganathaswamy</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 7 - 9 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tirupati Balaji Yatra -->
+        <div class="dest-grid-card reveal" data-region="south">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">South India</span>
+            <img src="public/images/dest-tirupati.png" alt="Tirupati Balaji" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Tirupati Balaji Yatra</h3>
+              <p>Complete darshan planning at Tirumala Sri Venkateswara Temple, Tiruchanur Padmavathi, and Kapila Theertham in Chittoor district.</p>
+              <ul class="dest-features">
+                <li>Special Entry Darshan ticket</li>
+                <li>Laddoo prasadam slots</li>
+                <li>Srikalahasti Rahu-Ketu puja</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 2 - 3 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Himalayan Treks -->
+        <div class="dest-grid-card reveal" data-region="adventures">
+          <div class="dest-card-img-wrap">
+            <span class="dest-region-badge">Treks & Adventures</span>
+            <img src="public/images/dest-adventure.png" alt="Himalayan Treks" loading="lazy">
+          </div>
+          <div class="dest-grid-content">
+            <div>
+              <h3>Himalayan Adventures</h3>
+              <p>High-altitude treks like Kedarkantha, Valley of Flowers, Roopkund, and Tungnath-Chandrashila with complete safety gears and guides.</p>
+              <ul class="dest-features">
+                <li>Certified Trek Leaders</li>
+                <li>Warm dome tents & sleeping bags</li>
+                <li>High safety & medical kits</li>
+              </ul>
+            </div>
+            <div class="dest-card-footer">
+              <span class="dest-duration">⏱️ 5 - 8 Days</span>
+              <a href="contact.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Yatra Builder Card -->
+        <div class="dest-grid-card custom-builder-card reveal" data-region="all">
+          <div class="custom-card-icon">✨</div>
+          <h3>Custom Builder</h3>
+          <p>Don't see your target temple or circuit listed? We offer fully custom yatras to anywhere in India. Tell us when, where, and how many days.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Build My Yatra <i class="fas fa-edit"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="public/images/logo.png" alt="Yatrakaar Logo">
+          <p>Your trusted partner for sacred pilgrimages and spiritual adventures across India. Fully customized yatras with expert on-ground support.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/yatrakaar" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/yatrakaar" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com/@yatrakaar" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/917569435006" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Packages</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Yatras</h4>
+          <ul>
+            <li><a href="services.html">Char Dham Yatra</a></li>
+            <li><a href="services.html">Ayodhya – Kashi – Prayag</a></li>
+            <li><a href="services.html">South India Temples</a></li>
+            <li><a href="services.html">Himalayan Treks</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+917569435006">+91 7569435006</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="footer-contact-text"><strong>Email</strong><a href="mailto:yatrakaar@gmail.com">yatrakaar@gmail.com</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="footer-contact-text"><strong>Location</strong>Hyderabad, Telangana, India</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yatrakaar. All rights reserved. | Crafted with 🕉️ devotion</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/917569435006" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="js/main.js" type="module"></script>
+  <script>
+    // --- Destination Filtering Script ---
+    const tabButtons = document.querySelectorAll('.dest-tab-btn');
+    const destCards = document.querySelectorAll('.dest-grid-card');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle Active Tab class
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        destCards.forEach(card => {
+          // Keep custom builder always visible, or hide if filters applied (except all)
+          const region = card.getAttribute('data-region');
+          
+          if (card.classList.contains('custom-builder-card')) {
+            card.classList.remove('hidden');
+            return;
+          }
+
+          if (filterValue === 'all' || region === filterValue) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
