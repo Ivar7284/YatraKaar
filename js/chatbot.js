@@ -155,7 +155,7 @@ export function initChatbot() {
     } catch (error) {
       console.error(error);
       removeTypingIndicator();
-      addMessage("Sorry, I'm having trouble connecting right now. Please try again later or contact our team directly.", 'bot');
+      addMessage(`Error: ${error.message}. isDev: ${import.meta.env.DEV}, hasKey: ${!!import.meta.env?.VITE_GROQ_API_KEY}`, 'system');
     } finally {
       sendBtn.disabled = false;
       inputEl.focus();
