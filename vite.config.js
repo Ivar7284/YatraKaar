@@ -3,6 +3,15 @@ import { resolve } from 'path';
 
 export default defineConfig({
   base: './',
+  server: {
+    proxy: {
+      '/api/chat': {
+        target: 'https://api.groq.com/openai/v1/chat/completions',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/chat/, '')
+      }
+    }
+  },
   build: {
     rollupOptions: {
       input: {
