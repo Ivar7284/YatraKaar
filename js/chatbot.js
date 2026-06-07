@@ -109,12 +109,13 @@ export function initChatbot() {
     showTypingIndicator();
 
     try {
-      // First try to use VITE_GROQ_API_KEY from env if available (for local dev)
+      // Only use the local proxy if we are in development mode
+      const isDev = import.meta.env.DEV;
       const clientSideKey = import.meta.env?.VITE_GROQ_API_KEY;
       
       let replyText = "";
 
-      if (clientSideKey) {
+      if (isDev && clientSideKey) {
         // Fallback to client-side API call via Vite Proxy if key is provided directly in .env
         const response = await fetch('/api/chat', {
           method: 'POST',

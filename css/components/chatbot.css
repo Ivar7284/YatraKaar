@@ -1,15 +1,15 @@
 /* Chatbot UI Styles */
 .chatbot-container {
   position: fixed;
-  bottom: 90px;
-  right: 20px;
+  bottom: 6.5rem;
+  right: 2rem;
   z-index: 1000;
   font-family: var(--font-primary, 'Inter', sans-serif);
 }
 
 .chatbot-button {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--gold-500, #E6B84F);
   color: #1a1a1a;
